@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "icsneed_com_backend": {
+      "main": "src/icsneed_com_backend/main.mo",
+      "type": "motoko"
+    },
+    "icsneed_com_frontend": {
+      "dependencies": [
+        "icsneed_com_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icsneed_com_frontend/src/index.html"
+      },
+      "source": [
+        "src/icsneed_com_frontend/assets",
+        "dist/icsneed_com_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
